@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+
+android {
+    resourcePrefix 'v_crash'
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    testImplementation rootProject.ext.testDependencies['junit']
+    androidTestImplementation rootProject.ext.testDependencies['androidxTestExtJunit']
+    androidTestImplementation rootProject.ext.testDependencies['androidxTestEspressoCore']
+
+    implementation rootProject.ext.dependencies['androidxAppcompat']
+    implementation rootProject.ext.dependencies['androidxConstraintLayout']
+}

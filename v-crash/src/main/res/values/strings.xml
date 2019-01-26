@@ -1,0 +1,12 @@
+<resources>
+    <string name="v_crash_text_crash_simple_info">奔溃信息:</string>
+    <string name="v_crash_text_crash_class_name">类名:</string>
+    <string name="v_crash_text_crash_line_num">行数：</string>
+    <string name="v_crash_text_crash_method_name">方法名：</string>
+    <string name="v_crash_text_crash_type">类型：</string>
+    <string name="v_crash_text_crash_time">时间：</string>
+    <string name="v_crash_text_crash_device_name">设备名称：</string>
+    <string name="v_crash_text_crash_device_brand">设备厂商：</string>
+    <string name="v_crash_text_crash_system_version">系统版本：</string>
+    <string name="v_crash_text_crash_full_info">全部信息：</string>
+</resources>

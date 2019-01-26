@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">VCrash</string>
+    <string name="text_btn_crash_current">crash current</string>
+    <string name="text_btn_crash_next">crash next</string>
+    <string name="text_btn_crash_action_custom">crash action custom</string>
+    <string name="text_btn_crash_action_custome_reset">crash action custome reset</string>
+    <string name="text_custome_crash_info">you have a crash~</string>
+</resources>
