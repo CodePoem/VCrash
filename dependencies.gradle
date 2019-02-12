@@ -3,7 +3,7 @@ def junitVer = "4.12"
 def androidxTestExtJunitVer = "1.1.0"
 def androidxTestEspressoCoreVer = "3.1.1"
 // normal package version
-def androidxAppcompatVer = "1.1.0-alpha01"
+def androidxAppcompatVer = "1.0.0"
 def androidxConstraintLayoutVer = "1.1.3"
 
 ext {
