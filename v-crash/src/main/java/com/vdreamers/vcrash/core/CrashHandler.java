@@ -3,6 +3,7 @@ package com.vdreamers.vcrash.core;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Process;
+import android.util.Log;
 
 import com.vdreamers.vcrash.action.CrashListener;
 import com.vdreamers.vcrash.action.DefaultCrashAction;
@@ -24,15 +25,15 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
      * context better be application context
      */
     @SuppressLint("StaticFieldLeak")
-    private static Context mContext;
+    protected static Context mContext;
     /**
      * system default UncaughtExceptionHandler
      */
-    private Thread.UncaughtExceptionHandler mDefaultHandler;
+    protected Thread.UncaughtExceptionHandler mDefaultHandler;
     /**
      * crash listener
      */
-    private CrashListener mCrashListener;
+    protected CrashListener mCrashListener;
 
     public CrashHandler init(Context context) {
         if (context != null) {
@@ -52,7 +53,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
         return getInstance();
     }
 
-    private CrashHandler() {
+    protected CrashHandler() {
         mDefaultHandler = Thread.getDefaultUncaughtExceptionHandler();
         Thread.setDefaultUncaughtExceptionHandler(this);
     }
@@ -76,7 +77,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
         }
         mCrashListener.onCrash(mContext, crashModel);
 
-//        Process.killProcess(Process.myPid());
+        Log.e("CrashHandler", "CrashHandler uncaughtException");
         if (mDefaultHandler == null) {
             Process.killProcess(Process.myPid());
         } else {
@@ -84,7 +85,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
         }
     }
 
-    private CrashModel parseCrash(Throwable throwable) {
+    protected CrashModel parseCrash(Throwable throwable) {
         CrashModel crashModel = new CrashModel();
         if (throwable == null) {
             return crashModel;

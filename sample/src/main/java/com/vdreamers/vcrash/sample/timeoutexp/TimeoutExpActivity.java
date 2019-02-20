@@ -66,7 +66,11 @@ public class TimeoutExpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timeout_exp);
+
+        TimeoutCrashHandler.getInstance().init(TimeoutExpActivity.this);
+
         resetWatchDogStatus();
+
         findViewById(R.id.btn_kill_watchdog).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
