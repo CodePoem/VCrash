@@ -42,6 +42,14 @@
             android:layout_marginTop="@dimen/v_crash_dp_16"
             android:text="@string/text_btn_crash_action_custome_reset" />
 
+        <Button
+            android:id="@+id/btn_time_out_exp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/v_crash_dp_16"
+            android:text="@string/text_btn_timeout_exp" />
+
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

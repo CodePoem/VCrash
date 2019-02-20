@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.vdreamers.vcrash.core.CrashHandler;
+import com.vdreamers.vcrash.sample.timeoutexp.TimeoutExpActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -45,6 +46,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 CrashHandler.getInstance().setCrashListener(null);
+            }
+        });
+        findViewById(R.id.btn_time_out_exp).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TimeoutExpActivity.class));
             }
         });
     }
