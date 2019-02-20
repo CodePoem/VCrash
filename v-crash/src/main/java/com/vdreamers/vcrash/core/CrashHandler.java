@@ -76,6 +76,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
         }
         mCrashListener.onCrash(mContext, crashModel);
 
+//        Process.killProcess(Process.myPid());
         if (mDefaultHandler == null) {
             Process.killProcess(Process.myPid());
         } else {

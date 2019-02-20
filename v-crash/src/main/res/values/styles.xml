@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="v_crash_style_info_text_head">
         <item name="android:textColor">@color/v_crash_black</item>
         <item name="android:textSize">@dimen/v_crash_text_size_20</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/v_crash_dp_8</item>
+        <item name="android:layout_marginRight">@dimen/v_crash_dp_8</item>
     </style>
+
     <style name="v_crash_style_info_text_context">
         <item name="android:textColor">@color/v_crash_red</item>
         <item name="android:textSize">@dimen/v_crash_text_size_18</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/v_crash_dp_8</item>
+        <item name="android:textIsSelectable">true</item>
     </style>
 </resources>

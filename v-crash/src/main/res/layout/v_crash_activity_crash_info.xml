@@ -5,203 +5,115 @@
     android:layout_height="match_parent"
     tools:context=".action.CrashInfoActivity">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv_crash_simple_info"
             style="@style/v_crash_style_info_text_head"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/v_crash_dp_16"
             android:layout_marginTop="@dimen/v_crash_dp_16"
-            android:layout_marginRight="@dimen/v_crash_dp_16"
             android:text="@string/v_crash_text_crash_simple_info" />
 
         <TextView
             android:id="@+id/tv_content_crash_simple_info"
             style="@style/v_crash_style_info_text_context"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_crash_simple_info"
-            android:layout_margin="@dimen/v_crash_dp_16"
             tools:text="我是奔溃信息asdsadasdasdasdsdasdadasdsdasdasdasd我是奔溃信息asdsadasdasdasdsdasdadasdsdasdasdasd我是奔溃信息asdsadasdasdasdsdasdadasdsdasdasdasd我是奔溃信息asdsadasdasdasdsdasdadasdsdasdasdasd" />
 
         <TextView
             android:id="@+id/tv_crash_class_name"
             style="@style/v_crash_style_info_text_head"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_content_crash_simple_info"
-            android:layout_marginLeft="@dimen/v_crash_dp_16"
-            android:layout_marginRight="@dimen/v_crash_dp_16"
             android:text="@string/v_crash_text_crash_class_name" />
 
         <TextView
             android:id="@+id/tv_content_crash_class_name"
             style="@style/v_crash_style_info_text_context"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/tv_crash_class_name"
-            android:layout_toEndOf="@+id/tv_crash_class_name"
-            tools:text="SSSS" />
+            tools:text="SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS" />
 
         <TextView
             android:id="@+id/tv_crash_method_name"
             style="@style/v_crash_style_info_text_head"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_content_crash_class_name"
-            android:layout_marginLeft="@dimen/v_crash_dp_16"
-            android:layout_marginRight="@dimen/v_crash_dp_16"
             android:text="@string/v_crash_text_crash_method_name" />
 
         <TextView
             android:id="@+id/tv_content_crash_method_name"
             style="@style/v_crash_style_info_text_context"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/tv_crash_method_name"
-            android:layout_toEndOf="@+id/tv_crash_method_name"
             tools:text="asd" />
 
         <TextView
             android:id="@+id/tv_crash_line_num"
             style="@style/v_crash_style_info_text_head"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_content_crash_method_name"
-            android:layout_marginStart="@dimen/v_crash_dp_16"
-            android:layout_toEndOf="@dimen/v_crash_dp_16"
             android:text="@string/v_crash_text_crash_line_num" />
 
         <TextView
             android:id="@+id/tv_content_crash_line_num"
             style="@style/v_crash_style_info_text_context"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/tv_crash_line_num"
-            android:layout_toEndOf="@+id/tv_crash_line_num"
             tools:text="123" />
 
         <TextView
             android:id="@+id/tv_crash_type"
             style="@style/v_crash_style_info_text_head"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_content_crash_line_num"
-            android:layout_marginLeft="@dimen/v_crash_dp_16"
-            android:layout_marginRight="@dimen/v_crash_dp_16"
             android:text="@string/v_crash_text_crash_type" />
 
         <TextView
             android:id="@+id/tv_content_crash_type"
             style="@style/v_crash_style_info_text_context"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/tv_crash_type"
-            android:layout_toEndOf="@+id/tv_crash_type"
-            tools:text="NPE" />
+            tools:text="NPENPENPENPENPENPENPENPENPE" />
 
         <TextView
             android:id="@+id/tv_crash_time"
             style="@style/v_crash_style_info_text_head"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_content_crash_type"
-            android:layout_marginLeft="@dimen/v_crash_dp_16"
-            android:layout_marginRight="@dimen/v_crash_dp_16"
             android:text="@string/v_crash_text_crash_time" />
 
         <TextView
             android:id="@+id/tv_content_crash_time"
             style="@style/v_crash_style_info_text_context"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/tv_crash_time"
-            android:layout_toEndOf="@+id/tv_crash_time"
             tools:text="2019-01-24 16:22:53" />
 
 
         <TextView
             android:id="@+id/tv_crash_device_name"
             style="@style/v_crash_style_info_text_head"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_crash_time"
-            android:layout_marginLeft="@dimen/v_crash_dp_16"
-            android:layout_marginTop="@dimen/v_crash_dp_32"
-            android:layout_marginRight="@dimen/v_crash_dp_16"
+            android:layout_marginTop="@dimen/v_crash_dp_24"
             android:text="@string/v_crash_text_crash_device_name" />
 
         <TextView
             android:id="@+id/tv_content_crash_device_name"
             style="@style/v_crash_style_info_text_context"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/tv_crash_device_name"
-            android:layout_toEndOf="@+id/tv_crash_device_name"
             tools:text="MI10001" />
 
         <TextView
             android:id="@+id/tv_crash_device_brand"
             style="@style/v_crash_style_info_text_head"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_crash_device_name"
-            android:layout_marginLeft="@dimen/v_crash_dp_16"
-            android:layout_marginRight="@dimen/v_crash_dp_16"
             android:text="@string/v_crash_text_crash_device_brand" />
 
         <TextView
             android:id="@+id/tv_content_crash_device_brand"
             style="@style/v_crash_style_info_text_context"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/tv_crash_device_brand"
-            android:layout_toEndOf="@+id/tv_crash_device_brand"
             tools:text="小米" />
 
         <TextView
             android:id="@+id/tv_crash_system_version"
             style="@style/v_crash_style_info_text_head"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_crash_device_brand"
-            android:layout_marginLeft="@dimen/v_crash_dp_16"
-            android:layout_marginRight="@dimen/v_crash_dp_16"
             android:text="@string/v_crash_text_crash_system_version" />
 
         <TextView
             android:id="@+id/tv_content_crash_system_version"
             style="@style/v_crash_style_info_text_context"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/tv_crash_system_version"
-            android:layout_toEndOf="@+id/tv_crash_system_version"
             tools:text="NPE" />
 
         <TextView
             android:id="@+id/tv_crash_full_info"
             style="@style/v_crash_style_info_text_head"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_crash_system_version"
-            android:layout_marginLeft="@dimen/v_crash_dp_16"
-            android:layout_marginTop="@dimen/v_crash_dp_32"
-            android:layout_marginRight="@dimen/v_crash_dp_16"
+            android:layout_marginTop="@dimen/v_crash_dp_24"
             android:text="@string/v_crash_text_crash_full_info" />
 
         <TextView
             android:id="@+id/tv_content_crash_full_info"
             style="@style/v_crash_style_info_text_context"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_crash_full_info"
-            android:layout_margin="@dimen/v_crash_dp_16"
             tools:text="我是全部信息asdsadasdasdasdsdasdadasdsdasdasdasd哈哈哈哈哈哈哈哈哈哈或我是全部信息asdsadasdasdasdsdasdadasdsdasdasdasd哈哈哈哈哈哈哈哈哈哈或" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
