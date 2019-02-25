@@ -19,7 +19,7 @@ public class TimeoutCrashHandler extends CrashHandler {
 
     protected TimeoutCrashHandler() {
         mDefaultHandler = Thread.getDefaultUncaughtExceptionHandler();
-        Thread.setDefaultUncaughtExceptionHandler(this);
+        Thread.setDefaultUncaughtExceptionHandler(TimeoutCrashHandler.this);
     }
 
     private static class SingleHolder {
@@ -44,5 +44,8 @@ public class TimeoutCrashHandler extends CrashHandler {
 
         Log.e("TimeoutCrashHandler", "TimeoutCrashHandler uncaughtException");
         Process.killProcess(Process.myPid());
+        if (mDefaultHandler != null) {
+            mDefaultHandler.uncaughtException(t, e);
+        }
     }
 }

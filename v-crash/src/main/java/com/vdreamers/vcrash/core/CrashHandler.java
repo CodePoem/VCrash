@@ -55,7 +55,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
 
     protected CrashHandler() {
         mDefaultHandler = Thread.getDefaultUncaughtExceptionHandler();
-        Thread.setDefaultUncaughtExceptionHandler(this);
+        Thread.setDefaultUncaughtExceptionHandler(CrashHandler.this);
     }
 
     private static class SingleHolder {
