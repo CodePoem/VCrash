@@ -3,6 +3,7 @@ package com.vdreamers.vcrash.sample;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 
 /**
  * test activity
@@ -17,7 +18,12 @@ public class TestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
-        String crashString = null;
-        int length = crashString.length();
+        findViewById(R.id.btn_crash_current).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String crashString = null;
+                int length = crashString.length();
+            }
+        });
     }
 }
